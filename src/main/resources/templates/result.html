@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>結果</h1>
+	<h2 th:text="${cityName}">cityName</h2>
+    <table>
+    	<tr><th>項目</th><th>値</th></tr>
+    	<tr th:object="${apiResponse}"><td>夜明け</td><td th:text="*{dawn}">hai</td></tr>
+    	<tr th:object="${apiResponse}"><td>日の出</td><td th:text="*{sunrise}">hai</td></tr>
+    	<tr th:object="${apiResponse}"><td>南中</td><td th:text="*{noon}">hai</td></tr>
+    	<tr th:object="${apiResponse}"><td>日の入り</td><td th:text="*{sunset}">hai</td></tr>
+    	<tr th:object="${apiResponse}"><td>薄暮</td><td th:text="*{dusk}">hai</td></tr>
+    </table>
+</body>
+</html>
